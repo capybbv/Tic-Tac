@@ -268,7 +268,8 @@ def b_click(b):
         count += 1
         b.config(state=DISABLED)
         check_win()
-    elif b["text"] == " " and clicked == False:
+    elif b["text"] == " " and clicked == False: # Microsoft Windows [Version 10.0.22000.556]
+    # (c) Microsoft Corporation. All rights reserved.
         b["text"] = "O"
         clicked = True
         count += 1
