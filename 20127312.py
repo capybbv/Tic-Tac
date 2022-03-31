@@ -22,13 +22,13 @@ def disable_all_buttons():
             j.config(state=DISABLED)
     # b1.config(state=DISABLED)
     # b2.config(state=DISABLED)
-    # b3.config(state=DISABLED)
-    # b4.config(state=DISABLED)
+    # b3.config(state=DISABLED)rtrgt
+    # b4.config(state=DISABLED)wrwer
     # b5.config(state=DISABLED)
-    # b6.config(state=DISABLED)
-    # b7.config(state=DISABLED)
+    # b6.config(state=DISABLED)   efrt
+    # b7.config(state=DISABLED) aa   
     # b8.config(state=DISABLED)
-    # b9.config(state=DISABLED)
+    # b9.config(state=DISABLED)    sf   
 
 # Check to see if someone won
 
