@@ -85,7 +85,7 @@ def checkDraw():
     for key in board.keys():
         if (board[key] == ' '):
             return False
-    return True
+    return True       # TOD
 
 
 def playerMove():
