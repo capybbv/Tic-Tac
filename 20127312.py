@@ -311,7 +311,7 @@ def reset():
     b9 = Button(root, text=" ", font=("Helvetica", 25), height=3,
                 width=6, bg="SystemButtonFace", command=lambda: b_click(b9))
 
-    # Grid our buttons to the screen
+    # Grid our butto     ns to the screen
     b1.grid(row=0, column=0)
     b2.grid(row=0, column=1)
     b3.grid(row=0, column=2)
