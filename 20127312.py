@@ -22,13 +22,13 @@ def disable_all_buttons():
             j.config(state=DISABLED)
     # b1.config(state=DISABLED)
     # b2.config(state=DISABLED)
-    # b3.config(state=DISABLED)rtrgt
-    # b4.config(state=DISABLED)wrwer
+    # b3.config(state=DISABLED)
+    # b4.config(state=DISABLED)
     # b5.config(state=DISABLED)
-    # b6.config(state=DISABLED)   efrt
-    # b7.config(state=DISABLED) aa   
+    # b6.config(state=DISABLED) 
+    # b7.config(state=DISABLED) 
     # b8.config(state=DISABLED)
-    # b9.config(state=DISABLED)    sf   
+    # b9.config(state=DISABLED)    
 
 # Check to see if someone won
 
@@ -158,7 +158,7 @@ def check_win():
             t[i][2].config(bg="red")
             winner = True
             disable_all_buttons()
-            if t[i][0]["text"] != "X":
+            if t[i][0]["text"] == "X":
                 messagebox.showinfo(
                     "Tic Tac Toe", "CONGRATULATIONS! X Wins!!!")
                 return 1
@@ -166,13 +166,13 @@ def check_win():
                 messagebox.showinfo(
                     "Tic Tac Toe", "CONGRATULATIONS! O Wins!!!")
                 return -1
-        if t[0][i]["text"] != " " and t[0][i]["text"] == t[1][0]["text"] and t[0][i]["text"] == t[2][i]["text"]:
+        if t[0][i]["text"] != " " and t[0][i]["text"] == t[1][i]["text"] and t[0][i]["text"] == t[2][i]["text"]:
             t[0][i].config(bg="red")
             t[1][i].config(bg="red")
             t[2][i].config(bg="red")
             disable_all_buttons()
             winner = True
-            if t[0][i]["text"] != "X":
+            if t[0][i]["text"] == "X":
                 messagebox.showinfo(
                     "Tic Tac Toe", "CONGRATULATIONS! X Wins!!!")
                 return 1
@@ -187,20 +187,20 @@ def check_win():
         t[2][2].config(bg="red")
         disable_all_buttons()
         winner = True
-        if t[0][i]["text"] != "X":
+        if t[0][0]["text"] == "X":
             messagebox.showinfo("Tic Tac Toe", "CONGRATULATIONS! X Wins!!!")
             return 1
         else:
             messagebox.showinfo("Tic Tac Toe", "CONGRATULATIONS! O Wins!!!")
             return -1
 
-    if t[0][2]["text"] != " " and t[1][1]["text"] == t[0][0]["text"] and t[1][1]["text"] == t[2][0]["text"]:
+    if t[0][2]["text"] != " " and t[1][1]["text"] == t[0][2]["text"] and t[1][1]["text"] == t[2][0]["text"]:
         t[0][2].config(bg="red")
         t[1][1].config(bg="red")
         t[2][0].config(bg="red")
         disable_all_buttons()
         winner = True
-        if t[0][i]["text"] != "X":
+        if t[0][2]["text"] == "X":
             messagebox.showinfo("Tic Tac Toe", "CONGRATULATIONS! X Wins!!!")
             return 1
         else:
@@ -268,8 +268,7 @@ def b_click(b):
         count += 1
         b.config(state=DISABLED)
         check_win()
-    elif b["text"] == " " and clicked == False: # Microsoft Windows [Version 10.0.22000.556]
-    # (c) Microsoft Corporation. All rights reserved.
+    elif b["text"] == " " and clicked == False:  
         b["text"] = "O"
         clicked = True
         count += 1
@@ -284,7 +283,7 @@ def b_click(b):
 
 
 def reset():
-    global b1, b2, b3, b4, b5, b6, b7, b8, b9, t
+    global t
     global clicked, count
     clicked = True
     count = 0
@@ -324,8 +323,6 @@ def reset():
     b8.grid(row=2, column=1)
     b9.grid(row=2, column=2)
     t = [[b1, b2, b3], [b4, b5, b6], [b7, b8, b9]]
-    print(t[0][0]["text"])
-
 
 # Create my menu
 my_menu = Menu(root)
